@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+build/
+**/dist/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+**/ssl/
+
+# Generated PDFs and uploads
+backend/pdfs/
+backend/logs/
+**/pdfs/
+**/logs/
+*.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# Local Claude config
+.claude/

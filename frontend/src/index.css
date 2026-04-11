@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #faf7f2;
+  color: #3d2b1f;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f0ebe3; }
+::-webkit-scrollbar-thumb { background: #c4b5a4; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a89888; }
+
+/* Number input remove spinners */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance: textfield; }
+
+/* Print: clean, no-box invoice */
+@media print {
+  body { background: white !important; color: black !important; margin: 0 !important; padding: 0 !important; }
+  @page { margin: 12mm 10mm; }
+  nav, .print\:hidden { display: none !important; }
+}
